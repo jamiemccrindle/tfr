@@ -3,6 +3,10 @@
  Searches for a pattern in a file line by line and outputs a replacement string that can contain any captured
  groups. 
 
+ ## Install
+
+    npm install --global tfr
+
  ## Examples
 
     # prints out all the lines in the input file

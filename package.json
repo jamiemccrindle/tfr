@@ -1,8 +1,17 @@
 {
   "name": "tfr",
+  "author": "Jamie McCrindle",
   "version": "1.0.3",
   "main": "index.js",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jamiemccrindle/tfr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jamiemccrindle/tfr/issues"
+  },
+  "homepage": "https://github.com/jamiemccrindle/tfr#readme",
   "dependencies": {
     "line-by-line": "^0.1.6",
     "yargs": "^10.0.3"

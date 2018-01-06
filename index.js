@@ -37,11 +37,11 @@ const promiseSerial = funcs =>
         Promise.resolve([]))
 
 var argv = require('yargs')
-    .command('$0 <pattern> <replacement> [files..]', `Seach and replace strings in a file e.g. tfr '/(.*?) (.*?)/' '$1 $2' test.txt`,
+    .command('$0 <pattern> <replacement> [files..]', `Seach and replace strings in a file e.g. tfr '(.*?) (.*?)' '$1 $2' test.txt`,
     (yargs) => {
         yargs
             .positional('pattern', {
-                describe: 'The pattern to match e.g. /^(.*)$/',
+                describe: 'The pattern to match e.g. ^(.*)$',
                 type: 'string'
             })
             .positional('replacement', {

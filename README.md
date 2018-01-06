@@ -9,9 +9,6 @@
 
 ## Examples
 
-    # prints out all the lines in the input file
-    tfr '(.*)' '$1' example.txt # prints out all lines in example.txt
-
     # prints out all the lines that look like URLs as links
     tfr '^(https?://.*)' '<a href="$1">$1</a>' example.txt
 

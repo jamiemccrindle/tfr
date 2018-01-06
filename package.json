@@ -1,0 +1,16 @@
+{
+  "name": "james",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "line-by-line": "^0.1.6",
+    "yargs": "^10.0.3"
+  },
+  "bin": {
+    "tfr": "./index.js"
+  },
+  "scripts": {
+    "start": "node ./index.js"
+  }
+}

@@ -1,13 +1,13 @@
- # Text Transformer
+# Text Transformer
 
  Searches for a pattern in a file line by line and outputs a replacement string that can contain any captured
  groups. 
 
- ## Install
+## Install
 
     npm install --global tfr
 
- ## Examples
+## Examples
 
     # prints out all the lines in the input file
     tfr '(.*)' '$1' example.txt # prints out all lines in example.txt

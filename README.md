@@ -13,7 +13,10 @@
     tfr '^(https?://.*)' '<a href="$1">$1</a>' example.txt
 
     # find all the files that have a parent directory called lib
-    find . | ./index.js "\/lib\/" '$_'
+    find . | tfr "\/lib\/" '$_'
+
+    # print how many 500 errors are in the access logs per hour
+    cat access.log | trf '^(.*?T\d+).* 500 ' '$1' | sort | uniq -c
 
 ## Usage
 

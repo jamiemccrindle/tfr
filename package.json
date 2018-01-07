@@ -23,6 +23,9 @@
     "url": "https://github.com/jamiemccrindle/tfr/issues"
   },
   "homepage": "https://github.com/jamiemccrindle/tfr#readme",
+  "devDependencies": {
+    "nsp": "^3.1.0"
+  },
   "dependencies": {
     "line-by-line": "^0.1.6",
     "yargs": "^10.0.3"
@@ -31,6 +34,7 @@
     "tfr": "./index.js"
   },
   "scripts": {
-    "start": "node ./index.js"
+    "start": "node ./index.js",
+    "security": "nsp check"
   }
 }

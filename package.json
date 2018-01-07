@@ -1,6 +1,17 @@
 {
   "name": "tfr",
-  "author": "Jamie McCrindle",
+  "author": {
+    "name": "Jamie McCrindle",
+    "email": "jamiemccrindle@gmail.com"
+  },
+  "copyright": "Copyright (c) 2018",
+  "keywords": [
+    "sed",
+    "grep",
+    "search",
+    "replace",
+    "cli"
+  ],
   "version": "1.0.5",
   "main": "index.js",
   "license": "MIT",

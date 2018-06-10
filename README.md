@@ -10,26 +10,29 @@
 ## Examples
 
     # prints out all the lines that look like URLs as links
-    tfr '^(https?://.*)' '<a href="$1">$1</a>' example.txt
+    tfr '^(https?://.*)' -r '<a href="$1">$1</a>' example.txt
 
     # find all the files that have a parent directory called lib
-    find . | tfr '\/lib\/' '$_'
+    find . | tfr '\/lib\/' -r '$_'
 
     # print how many 500 errors are in the access logs per hour
-    cat access.log | trf '^(.*?T\d+).* 500 ' '$1' | sort | uniq -c
+    cat access.log | trf '^(.*?T\d+).* 500 ' | sort | uniq -c
 
 ## Usage
 
-    tfr <pattern> <replacement> [files..]
+    tfr <pattern> [files..]
 
-    Seach and replace strings in a file e.g. tfr '(.*?) (.*?)' '$1 $2' test.txt
+    Search and replace strings in a file e.g. tfr '(.*?) (.*?)' test.txt. By default
+    matching groups will be printed out separated by tabs
 
     Positionals:
-    pattern      The pattern to match e.g. ^(.*)$                         [string]
-    replacement  The replacement text that can use replacement variables for
-                matched groups i.e. $_ $1 $2 etc.                         [string]
-    files        The files to search                                      [string]
+    pattern  The pattern to match e.g. ^(.*)$                             [string]
+    files    The files to search                                          [string]
 
     Options:
-    --version  Show version number                                       [boolean]
-    --help     Show help                                                 [boolean]
+    --version          Show version number                               [boolean]
+    --help             Show help                                         [boolean]
+    --replacement, -r  The replacement text that can use replacement variables for
+                        matched groups i.e. $1 $2 etc.                     [string]
+    --delimiter, -d    The output delimiter, defaults to a tab
+                                                            [string] [default: "  "]

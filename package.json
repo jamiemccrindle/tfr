@@ -24,7 +24,8 @@
   },
   "homepage": "https://github.com/jamiemccrindle/tfr#readme",
   "devDependencies": {
-    "nsp": "^3.1.0"
+    "nsp": "^3.1.0",
+    "prettier": "^1.13.5"
   },
   "dependencies": {
     "line-by-line": "^0.1.6",
